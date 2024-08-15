@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+<title>Donate_Old_plushie-Plushie.com</title>
+
+
+<style type="text/css">
+	
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+   box-sizing: border-box;
+}
+.container{
+	width: 100%;
+	min-height: 100vh;
+	background: #8b4513;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.product{
+	width: 90%;
+	max-width: 750px;
+	display: flex;
+
+}
+.gallery{
+	flex-basis: 47%;
+	background: burlywood;
+	transform: scale(1.08);
+	box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1) ;
+	position: relative;
+}
+.gallery img{
+	width: 120%;
+	display: block;
+	padding-top: 100px;
+}
+.details{
+	flex-basis: 53%;
+	background: #fff;
+	padding: 40px;
+	padding-left:60px ;
+	box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1) ;
+}
+.details h1{
+	color: #333;
+	font-size: 35px;
+	font-weight: bold;
+
+}
+
+.details h2{
+	color: #555;
+	font-size: 20px;
+	
+}
+.details form{
+	font-size: 15px;
+	font-weight: 400;
+}
+.plushie-size{
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
+}
+.plushie-size p{
+	width: 70px;
+}
+.plushie-size input:checked + span{
+	color: blue;
+	font-weight: 600;
+}
+.plushie-size span{
+	padding: 5px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.plushie-type{
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+.plushie-type p{
+	width: 70px;
+}
+.plushie-type input:checked + span{
+	color: blue;
+	font-weight: 600;
+}
+.plushie-type input{
+	display: none;
+}
+.plushie-type span{
+	padding: 5px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+form button{
+	background: #2e8b57 ;
+	color: white;
+	font-size: 17px;
+	width: 100%;
+	padding: 10px;
+	border-radius: 30px;
+	border: 0;
+	outline: 0;
+	margin-top: 30px;
+	box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
+	cursor: pointer;
+}
+.controls{
+	position: absolute;
+	bottom: 40px;
+	right: 20px;
+}
+.btn{
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5) ;
+	margin: 10px;
+	cursor: pointer;
+}
+.btn.active{
+	background: black;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="product">
+			<div class="gallery">
+				<img src="image/DONATE.png" id="productImg">
+				<div class="controls">
+					<span class="btn active"></span>
+					<span class="btn"></span>
+					<span class="btn"></span>
+					<span class="btn"></span>
+				</div>
+				</div>
+				<div class="details">
+					<h1>DONATE PLUSHIES</h1>
+					
+					<p>Are you feeling like you are hoarding too many toys? Let do good and donate it to charity! By using our service you will be apart of our team in helping local orphanage give the children a new hope! These children are craving for new toys, so why not let them feel that priviledge! Simply catergorize the toys you are donating. We will be in-touch through e-mail during the whole process. Upon donating, you will also receive mini plush keychains of your choice!</p>
+					
+					<form>
+						<div class="plushie-size">
+							<p>SIZES</p>
+							<label for="large">
+								<input type="radio" name="size" id="large" value="option1" onclick="calculatePrice()">
+								<span>L</span>
+							</label>
+							<label for="small">
+								<input type="radio" name="size" id="small" value="option2" onclick="calculatePrice()">
+								<span>S</span>
+							</label>
+						</div>
+
+						<div class="plushie-type">
+							<p>TOY TYPE</p>
+							<label for="SOFT">
+								<input type="radio" name="type" id="SOFT">
+								<span>SOFT TOYS</span>
+							</label>
+
+							<label for="HARD">
+								<input type="radio" name="type" id="HARD">
+								<span>HARD TOYS</span>
+							</label>
+						</div>
+
+						<div class="plushie-type">
+							<p>FREEBIES 4U</p>
+							<label for="BEAR">
+								<input type="radio" name="type" id="BEAR">
+								<span>BEAR</span>
+							</label>
+
+							<label for="CAT">
+								<input type="radio" name="type" id="CAT">
+								<span>CAT</span>
+							</label>
+
+							<label for="DOG">
+								<input type="radio" name="type" id="DOG">
+								<span>DOG</span>
+							</label>
+
+							<label for="FLOWER">
+								<input type="radio" name="type" id="FLOWER">
+								<span>FLOWER</span>
+							</label>
+							<label for="ALPHABET">
+								<input type="radio" name="type" id="ALPHABET">
+								<span>INITIALS</span>
+							</label>
+							<label for="RANDOM">
+								<input type="radio" name="type" id="RANDOM">
+								<span>SURPRISE ME</span>
+							</label>
+						</div>
+                   <div><p id="price"><b>Total Price: </b><span id="price"></span></p></div>
+
+						<button> <a href="Payment1.html">BOOK YOUR SLOT SERVICE</a></button>
+
+
+
+					</form>
+					
+				</div>
+				
+			</div>
+		</div>
+
+		<script type="text/javascript">
+
+	   function calculatePrice() {
+      // Get the selected radio button
+      var radioButtons = document.getElementsByName('size');
+      var selectedRadioButton;
+      
+      for (var i = 0; i < radioButtons.length; i++) {
+        if (radioButtons[i].checked) {
+          selectedRadioButton = radioButtons[i];
+          break;
+        }
+      }
+      
+      // Calculate the price based on the selected radio button
+      var price;
+      
+      if (selectedRadioButton) {
+        var selectedValue = selectedRadioButton.value;
+        
+        // Perform the calculation based on the selected value
+        if (selectedValue === 'option1') {
+          price = 8.00;
+        } else if (selectedValue === 'option2') {
+          price = 5.00;
+        } 
+        }
+      
+      
+      // Display the calculated price
+      var priceElement = document.getElementById('price');
+      priceElement.innerHTML = price ? '<b>Total Price: RM ' + price.toFixed(2) : '</b>';
+    
+			let productImg = document.getElementById("productImg");
+			let btn = document.getElementsByClassName("btn");
+
+			btn[0].onclick = function(){
+				productImg.src = "image/DONATE.png";
+
+				for(bt of btn){
+					bt.classList.remove("active");
+				}
+				this.classList.add("active");
+			}
+			btn[1].onclick = function(){
+				productImg.src = "image/cat.png";
+				for(bt of btn){
+					bt.classList.remove("active");
+				}
+				this.classList.add("active");
+			}
+			btn[2].onclick = function(){
+				productImg.src = "image/dog.png";
+				for(bt of btn){
+					bt.classList.remove("active");
+				}
+				this.classList.add("active");
+			}
+			btn[3].onclick = function(){
+				productImg.src = "image/flower_2.png";
+				for(bt of btn){
+					bt.classList.remove("active");
+				}
+				this.classList.add("active");
+			}
+		
+		}	
+		</script>
+	</div>
+
+</body>

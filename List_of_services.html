@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plushie.com</title>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous">
+
+<style type="text/css">
+	
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+/*Navigation styling*/
+.container {
+   padding: 0 !important;
+}
+
+.container .navbar-brand {
+   font-size: 3rem;
+   padding: 0;
+}
+
+#navigation .nav-item {
+   padding-left: 1.6rem;
+}
+
+.bg-custom {
+   background-color: #8b4513;
+}
+
+.nav-link:hover {
+   color: #2e8b57;
+}
+
+/*Service styling*/
+.section-p1{
+	padding: 40px 80px;
+}
+
+#ServiceList{
+	text-align: center;
+	
+}
+#ServiceList h1{
+	text-align: center;
+	font-weight: bold;
+}
+#ServiceList .serv-container{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 20px ;
+	flex-wrap: wrap;
+}
+#ServiceList .serv-container .serv:hover .image img{
+	transform: scale(1.1);
+}
+
+#ServiceList .serv{
+	width:23%;
+	min-width: 250px ;
+	padding: 10px 12px;
+	border: 1px solid #8b4513;
+	border-radius: 25px;
+	cursor: pointer;
+	box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+	transition: 0.2s ease;
+}
+#ServiceList .serv:hover{
+	box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#ServiceList .serv img{
+	width: 100%;
+	border-radius: 20px;
+	justify-content: !important;
+}
+#ServiceList .serv .desc{
+	text-align: start;
+	padding: 10px 0;
+}
+.button {
+  padding: 4px 8px;
+  background-color: #98fb98; 
+  color: #2e8b57; 
+  border: 2px solid #2e8b57;
+}
+
+.button:hover {
+  padding: 4px 8px;
+  background-color: #2e8b57;
+  color: white;
+}
+#ServiceList .serv .desc h2{
+	text-align: center;
+	padding-top: 7px;
+	color: #1a1a1a;
+	font-size: 25px;
+	font-style: italic;
+	font-weight: bold;
+}
+#ServiceList .serv .desc h3{
+	padding-top: 7px;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: CENTER;
+}
+#ServiceList .serv .label{
+	color: black;
+}
+#ServiceList .serv .desc .color-list option {
+  background-color: var(--color);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+#ServiceList .serv .desc .color-list option::before {
+  content: attr(value);
+  margin-right: 10px;
+}
+.image {
+	width: 300px;
+	height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+</style>
+
+</head>
+<body>
+	<!--Navigation-->
+	<nav class="navbar navbar-expand-md navbar-dark bg-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#">Plushie</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link" href="homepage.html">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="itt588_aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item active">
+            <a class="nav-link">Service<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="Payment1.html">Booking</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+
+	<!--Service list-->
+	<section id="ServiceList" class="section-p1">
+		<h1>LIST OF SERVICES</h1>
+		<p>Browse of services below</p>
+		<div class="serv-container">
+			<div class="col-0.5"></div>
+ <!--BUILD Services-->
+			<div class="col-3 serv">
+				<div class="image">
+					<img src="image/bear2.png">
+				</div>
+				<div class="desc">
+					<h2>BUILD NEW PLUSHIES</h2>
+					<h3>LARGE-RM30.00<br> SMALL-RM25</h3>
+				</div>
+				<form action="BUILD-products.html">
+				  <button type="submit" class="button">SERVICE DETAILS</button>
+				</form>
+			</div>
+			<div class="col-1"></div>
+<!--RESTORE Services-->			
+			<div class="col-3 serv">
+				<div class="image">
+					<img src="image/hurtbear.png">
+				</div>
+				<div class="desc">
+					<h2><br>RESTORE OLD PLUSHIES</h2>
+					<h3>RM5.00 - RM 20.00</h3>
+				</div>
+				<form action="RESTORE-products.html">
+				  <button type="submit" class="button">SERVICE DETAILS</button>
+				</form>
+			</div>
+			<div class="col-1"></div>
+ <!--CUSTOMIZE Services-->
+			<div class="col-3 serv">
+				<div class="image">
+					<img src="image/build.png">
+				</div>
+				<div class="desc">
+					<h2>CUSTOMIZE NEW PLUSHIES</h2>
+					<h3>LARGE-RM40.00<br> SMALL-RM35</h3>
+				</div>
+				<form action="CUSTOMIZED-products.html">
+				  <button type="submit" class="button">SERVICE DETAILS</button>
+				</form>
+			</div>
+			<div class="col-0.5"></div>
+		</div>
+		<div class="serv-container">
+ <!--CUPID Services-->
+			<div class="col-2.5"></div>
+			<div class="col-3 serv">
+				<div class="image">
+					<img src="image/GIFTBOX.png">
+				</div>
+				<div class="desc">
+					<h2>CUPID SERVICES</h2>
+					<h3>LARGE-RM50.00<br> SMALL-RM40</h3>
+				</div>
+				<form action="CUPID-products.html">
+				  <button type="submit" class="button">SERVICE DETAILS</button>
+				</form>
+			</div>
+			<div class="col-1"></div>
+ <!--DONATE Services-->
+			<div class="col-3 serv">
+				<div class="image">
+					<img src="image/DONATE.png">
+				</div>
+				<div class="desc">
+					<h2>DONATION BOX</h2>
+					<h3>JUST PAY SHIPPING!!</h3>
+				</div>
+				<form action="DONATE-products.html">
+				  <button type="submit" class="button">SERVICE DETAILS</button>
+				</form>
+			</div>
+			<div class="col-2.5"></div>
+ <!--Done Services-->	
+		</div>
+		
+	</section>
+
+</body>

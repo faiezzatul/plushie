@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+<title>Build_New_plushie-Plushie.com</title>
+
+
+<style type="text/css">
+	
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+   box-sizing: border-box;
+}
+.container{
+	width: 100%;
+	min-height: 100vh;
+	background: #8b4513;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.product{
+	width: 90%;
+	max-width: 750px;
+	display: flex;
+
+}
+.gallery{
+	flex-basis: 47%;
+	background: burlywood;
+	transform: scale(1.08);
+	box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1) ;
+	position: relative;
+}
+.gallery img{
+	width: 120%;
+	display: block;
+	padding-top: 100px;
+}
+.details{
+	flex-basis: 53%;
+	background: #fff;
+	padding: 40px;
+	padding-left:60px ;
+	box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1) ;
+}
+.details h1{
+	color: #333;
+	font-size: 35px;
+	font-weight: bold;
+
+}
+
+.details h2{
+	color: #555;
+	font-size: 20px;
+	
+}
+.details form{
+	font-size: 15px;
+	font-weight: 400;
+}
+.plushie-size{
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
+}
+.plushie-size p{
+	width: 70px;
+}
+.plushie-size input:checked + span{
+	color: blue;
+	font-weight: 600;
+}
+.plushie-size span{
+	padding: 5px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.plushie-type{
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+.plushie-type p{
+	width: 70px;
+}
+.plushie-type input:checked + span{
+	color: blue;
+	font-weight: 600;
+}
+.plushie-type input{
+	display: none;
+}
+.plushie-type span{
+	padding: 5px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.plushie-color{
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+.plushie-color p{
+	width: 75px;
+}
+.plushie-color span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin-right: 15px;
+	cursor: pointer;
+}
+.colour-1{
+	background: black;
+}
+.colour-2{
+	background: white;
+	box-shadow: black;
+}
+.colour-3{
+	background: #d2b48c;
+}
+.colour-5{
+	background: #ffb6c1;
+}
+.colour-6{
+	background: #add8e6;
+}
+.plushie-color input{
+	display: none;
+
+}
+.plushie-color input:checked + span{
+	transform: scale(0.7);
+	box-shadow: 0 0 0 4px white ,0 0 0 6px black ;
+}
+.plushie-addon{
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+.plushie-addon p{
+	width: 70px;
+}
+.plushie-addon input:checked + span{
+	color: blue;
+	font-weight: 600;
+}
+.plushie-addon span{
+	padding: 5px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.plushie-addon input{
+	display: none;
+}
+form button{
+	background: #2e8b57 ;
+	color: white;
+	font-size: 17px;
+	width: 100%;
+	padding: 10px;
+	border-radius: 30px;
+	border: 0;
+	outline: 0;
+	margin-top: 30px;
+	box-shadow: 0 10px 10px rgba(85, 63, 240, 0.25);
+	cursor: pointer;
+}
+.controls{
+	position: absolute;
+	bottom: 40px;
+	right: 20px;
+}
+.btn{
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5) ;
+	margin: 10px;
+	cursor: pointer;
+}
+.btn.active{
+	background: black;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="product">
+			<div class="gallery">
+				<img src="image/bear2.png" id="productImg">
+				<div class="controls">
+					<span class="btn active"></span>
+					<span class="btn"></span>
+					<span class="btn"></span>
+					<span class="btn"></span>
+				</div>
+				</div>
+				<div class="details">
+					<h1>BUILD NEW PLUSHIES</h1>
+					<p>Our plushies are made from scratch with quality material from neighbouring countries. Our plushies has been one of the best selling childrens toy, a must have for all youngsters in a family.<br><b> Add-ons will be RM8.00 each.</b></p>
+					
+					<form>
+						<div class="plushie-size">
+							<p>SIZES</p>
+							<label for="large">
+								<input type="radio" name="size" id="large" value="option1" onclick="calculatePrice()">
+								<span>L</span>
+							</label>
+							<label for="small">
+								<input type="radio" name="size" id="small" value="option2"onclick="calculatePrice()">
+								<span>S</span>
+							</label>
+						</div>
+
+						<div class="plushie-type">
+							<p>PLUSHIE TYPE</p>
+							<label for="BEAR">
+								<input type="radio" name="type" id="BEAR" value="0" onclick="calculatePrice()">
+								<span>BEAR</span>
+							</label>
+
+							<label for="CAT">
+								<input type="radio" name="type" id="CAT" value="0" onclick="calculatePrice()">
+								<span>CAT</span>
+							</label>
+
+							<label for="DOG">
+								<input type="radio" name="type" id="DOG" value="0" onclick="calculatePrice()">
+								<span>DOG</span>
+							</label>
+
+							<label for="FLOWER">
+								<input type="radio" name="type" id="FLOWER"  value="0" onclick="calculatePrice()">
+								<span>FLOWER</span>
+							</label>
+						</div>
+
+						<div class="plushie-color">
+							<p>COLOUR OPTIONS</p>
+							<label for="black">
+								<input type="radio" name="colour" id="black" value="0"  onclick="calculatePrice()">
+								<span class="colour-1"></span>
+								<p>BLACK</p>
+							</label>
+
+							<label for="white">
+								<input type="radio" name="colour" id="white" value="0"  onclick="calculatePrice()">
+								<span class="colour-2"></span>
+								<p>WHITE</p>
+							</label>
+
+							<label for="lightbrown">
+								<input type="radio" name="colour" id="lightbrown" value="0" onclick="calculatePrice()">
+								<span class="colour-3"></span>
+								<p>L.BROWN</p>
+							</label>
+
+							<label for="lightpink">
+								<input type="radio" name="colour" id="lightpink"  value="0" onclick="calculatePrice()">
+								<span class="colour-5"></span>
+								<p>PINK</p>
+							</label>
+
+							<label for="lightblue">
+								<input type="radio" name="colour" id="lightblue" value="0" onclick="calculatePrice()">
+								<span class="colour-6"></span>
+								<p>BLUE</p>
+							</label>
+							
+						</div>
+
+						<div class="plushie-addon">
+							<p>ADD-ONS</p>
+							<label for="card">
+								<input type="checkbox" name="extra" id="card" data-price="10" value="option11" onclick="calculatePrice()">
+								<span>HANDWRITTEN CARD</span>
+							</label>
+							<label for="ribbon">
+								<input type="checkbox" name="extra" id="ribbon" value="option12" data-price="10" onclick="calculatePrice()">
+								<span>RIBBON</span>
+							</label>
+							<label for="BELLS">
+								<input type="checkbox" name="extra" id="BELLS" value="option13" data-price="10" onclick="calculatePrice()">
+								<span>BELLS</span>
+							</label>
+						</div>
+						<br>
+                 <div><p id="price"><b>Total Price: </b><span id="price"></span></p></div>
+
+
+						
+						<button> <a href="Payment1.html">BOOK YOUR SLOT SERVICE</a></button>
+					  
+
+
+
+					</form>
+					
+				</div>
+				
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function calculatePrice() {
+      // Get the selected radio button
+      var selectedRadioButton = document.querySelector('input[name="size"]:checked');
+      
+      // Calculate the base price based on the selected radio button
+      var basePrice;
+      
+      if (selectedRadioButton) {
+        var selectedValue = selectedRadioButton.value;
+        
+        // Perform the calculation based on the selected value
+        if (selectedValue === 'option1') {
+          basePrice = 15.99;
+        } else if (selectedValue === 'option2') {
+          basePrice = 10.99;
+        } 
+      }
+      
+      // Calculate the total price by adding the selected checkbox values
+      var totalPrice = basePrice || 0; // Set default value to 0 if basePrice is not defined
+      
+      var checkboxes = document.querySelectorAll('input[name="extra"]:checked');
+      
+      for (var i = 0; i < checkboxes.length; i++) {
+        var checkbox = checkboxes[i];
+        var checkboxValue = parseFloat(checkbox.getAttribute('data-price'));
+        
+        if (!isNaN(checkboxValue)) {
+          totalPrice += checkboxValue;
+        }
+      }
+      
+      // Display the calculated total price
+      var priceElement = document.getElementById('price');
+      priceElement.innerHTML = totalPrice ? '<b>Total Price: RM ' + totalPrice.toFixed(2) : '</b>';
+
+
+      let productImg = document.getElementById("productImg");
+			let btn = document.getElementsByClassName("btn");
+
+
+			btn[0].onclick = function(){
+				productImg.src = "image/hurtbear.png";
+
+				for(bt of btn){
+					bt.classList.remove("active");
+
+				}
+				this.classList.add("active");
+			}
+			btn[1].onclick = function(){
+				productImg.src = "image/hurtbear2.png";
+				for(bt of btn){
+					bt.classList.remove("active");
+				}
+				this.classList.add("active");
+			}
+			btn[2].onclick = function(){
+				productImg.src = "image/hurtbear3.png";
+				for(bt of btn){
+					bt.classList.remove("active");
+				}
+				this.classList.add("active");
+			}
+    }
+			
+		</script>
+	</div>
+
+</body>

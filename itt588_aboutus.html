@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Plushie.com</title>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+   /*Body Styling*/
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.mainContainer,
+.navbar,
+.nav-link,
+.btn {
+   padding: 0 !important;
+   color: #8b4513;
+}
+
+.subContainer {
+   padding: 0 !important;
+}
+.container {
+   padding: 0 !important;
+}
+
+.bg-custom {
+   background-color: #8b4513;
+}
+
+.heroBanner,
+.row {
+   margin: 0 !important;
+   padding: 0 !important;
+   align-items: center;
+}
+
+.container .navbar-brand {
+   font-size: 3rem;
+   padding: 0;
+}
+
+/*navigation styling*/
+#navigation .nav-item {
+   padding-left: 1.6rem;
+}
+</style>
+
+
+   <style>
+body {
+  background: url("https://i.pinimg.com/564x/59/4e/d1/594ed140fb0d709ea6a9b5661bb2682a.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+.blur {
+  background: url("https://i.pinimg.com/564x/59/4e/d1/594ed140fb0d709ea6a9b5661bb2682a.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  filter: blur(13px);
+  position: absolute;
+  height: 500px;
+  top: -50px;
+  left: -10px;
+  right: -10px;
+  bottom: -50px;
+}
+
+.widget {
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*  NOT REQUIRED  */
+
+.text {
+  background: url("https://i.pinimg.com/564x/59/4e/d1/594ed140fb0d709ea6a9b5661bb2682a.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+
+  height: 240px;
+  width: 80%;
+}
+
+.text h2 {
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  color: ##8b4513;
+  margin-top: 0.5px;
+  font-family: "Lora", serif;
+  font-weight: 580;
+  font-size: 30px;
+}
+
+.text p {
+  text-align: center;
+  color: #A0522D;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  font-family: "Lato", serif;
+  font-weight: 520;
+  font-size: 20px;
+}
+
+/*TEAM MEMBER PART*/
+
+
+}
+.section-title h2 {
+  text-transform: uppercase;
+}
+.section-title {
+  margin: 3% 0;
+}
+.section-title p {
+  text-transform: uppercase;
+  font-weight:bold;
+}
+.single-team{
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow:5px 5px 15px #000;
+}
+
+.team-img{
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+}
+.team-img img{
+  width: 100%;
+  transition: .3s;
+}
+.single-team:hover .team-img img {
+  transform: scale(1.1);
+}
+.team-content {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  bottom: 0;
+  transition: all .4s;
+  background: tomato;
+  z-index:5;
+}
+.single-team:hover .team-content{
+  height: 150px;
+}
+.team-info {
+  padding: 5px 20px 5px 20px;
+  transition: all .5s;
+}
+.single-team:hover .team-content{
+  background: #000;
+}
+.single-team .team-content .team-info h3 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.team-info p {
+  margin-top: 15px;
+  color: #fff;
+ ;
+}
+.single-team-text p{
+  margin-top: 5px;
+}
+.team-text {
+  color: #fff;
+  padding: 0 10px 5px;
+}
+.teamMembers{
+  position: absolute;
+  top: 600px;
+  margin: 50px 100px;
+  row-gap: 100px;
+  padding-bottom: 600px;
+}
+
+</style>
+</head>
+<body>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous">
+<body>
+  <!--Main Container-->
+  <div class="container-fluid mainContainer">
+    <!--Header-->
+    <header>
+      <!--Navigation-->
+      <nav class="navbar navbar-expand-md navbar-dark bg-custom">
+        <div class="container">
+          <a class="navbar-brand" href="#">Plushie</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="homepage.html">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link">About Us<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="List_of_services.html">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Payment1.html">Booking</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+ </body>
+ 
+   </body>
+   
+<div class="widget center">
+  <div class="blur"></div>
+
+  <div class="text center">
+    <h2 class="">WELCOME TO PLUSHIE SERVICES!</h2>
+    <p>We are a dedicated company that provides a range of specialized services for plushie enthusiasts. Our mission is to enhance your plushie experience by offering high-quality and tailored services to meet your unique needs. Whether you're a collector, a plushie lover, or someone seeking personalized plushie creations, we have you covered. We are passionate about plushies and committed to providing exceptional services that exceed your expectations. Our team of dedicated professionals strives for excellence in every aspect of our work, ensuring your satisfaction and the well-being of your cherished plushies.</p> <br> <p> Choose Plushie Services for all your plushie needs & Let us make your plushie dreams come true! </p>
+  </div>
+  </div>
+
+
+<!--== TEEAM MEMBER ==-->
+
+
+<div class="team-area">
+  <div class="teamMembers">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title text-center">
+          <h2>Our Team</h2>
+          <p>Meet Our telented Team Member</p>
+        </div>
+      </div>
+
+      <!--== Single Team Item ==-->
+
+      <div class="col-md-3">
+        <div class="single-team">
+          <div class="team-img">
+            <img src="image/AM.jpg" alt="" class="img-responsive" height="300">
+          </div>
+          <div class="team-content">
+            <div class="team-info">
+              <h3>Puteri Nur Amelia binti Mohd Rosidi</h3>
+              <p>Project Manager</p>
+            </div>
+            <p class="team-text">2021847414 <br>2021847414@student.uitm.edu.my</p>
+
+          </div>
+        </div>
+      </div>
+      <!--== Single Team Item ==-->
+      <div class="col-md-3">
+        <div class="single-team">
+          <div class="team-img">
+            <img src="image/FA.jpg" alt="" class="img-responsive" height="300">
+          </div>
+          <div class="team-content">
+            <div class="team-info">
+              <h3>Faiezzatul Huda binti Abdul Fairuz</h3>
+              <p>Web Designer</p>
+            </div>
+            <p class="team-text">2021829898 <br>2021829898@student.uitm.edu.my</p>
+          </div>
+        </div>
+      </div>
+      <!--== Single Team Item ==-->
+      <div class="col-md-3">
+        <div class="single-team">
+          <div class="team-img">
+            <img src="image/ME.jpg" alt="" class="img-responsive" height="300">
+          </div>
+          <div class="team-content">
+            <div class="team-info">
+              <h3>Nur Aqilah Syahirah binti Mohd Yusof</h3>
+              <p>Web Developer</p>
+            </div>
+            <p class="team-text">2021600922 <br>2021600922@student.uitm.edu.my</p>
+          </div>
+        </div>
+      </div>
+      <!--== Single Team Item ==-->
+      <div class="col-md-3">
+        <div class="single-team">
+          <div class="team-img">
+            <img src="image/NI.jpg" alt="" class="img-responsive" height="300">
+          </div>
+          <div class="team-content">
+            <div class="team-info">
+              <h3>Khairunnisa binti Khairuddin</h3>
+              <p>System Engineer</p>
+            </div>
+            <p class="team-text">2021462464 <br> 2021462464@student.uitm.edu.my </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+  
+
+
+ 
+</html>

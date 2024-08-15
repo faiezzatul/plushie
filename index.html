@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plushie.com</title>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous">
+
+<style type="text/css">
+	/*Body Styling*/
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.mainContainer,
+.navbar,
+.nav-link,
+.btn {
+   padding: 0 !important;
+   color: #8b4513;
+}
+
+.container {
+   padding: 0 !important;
+}
+
+.heroBanner,
+.row {
+   margin: 0 !important;
+   padding: 0 !important;
+   align-items: center;
+}
+
+.container .navbar-brand {
+   font-size: 3rem;
+   padding: 0;
+}
+
+/*navigation styling*/
+#navigation .nav-item {
+   padding-left: 1.6rem;
+}
+
+.bg-custom {
+   background-color: #8b4513;
+}
+
+.nav-link:hover {
+   color: #2e8b57;
+}
+
+/*hero banner styling*/
+.heroBannercontainer {
+   background-color: #fdf5e6;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.heroBanner {
+   align-items: center;
+   box-sizing: border-box;
+}
+
+.bannerInfo h1 {
+   display: flex;
+   font-size: 3rem;
+}
+
+.bannerInfo p {
+   display: flex;
+   font-size: 1.125rem;
+   margin-bottom: 0.5rem !important;
+}
+
+.bannerInfo span {
+   display: inline;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.image{animation: up-down 1.4s infinite ease-in-out alternate;}
+@keyframes up-down{
+  from{transform: translatey(0px);}
+  to{transform: translatey(-20px);}
+}
+
+/*button styling*/
+.button1 {
+  background-color: #98fb98; 
+  color: #2e8b57; 
+  border: 2px solid #2e8b57;
+}
+
+.button1:hover {
+  background-color: #2e8b57;
+  color: white;
+}
+
+/*services section styling*/
+.servicecontainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.service {
+   align-items: center;
+   box-sizing: border-box;
+}
+
+.serviceNameL { text-align: right; }
+.serviceNameC { text-align: center; }
+.serviceNameR { text-align: left; }
+
+.buttonRotate {
+  position: absalute;
+  -webkit-animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/*how section styling*/
+.sectionTitle {text-align: center;}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+</style>
+
+</head>
+<body>
+  <!--Main Container-->
+  <div class="container-fluid mainContainer">
+    <!--Header-->
+    <header>
+      <!--Navigation-->
+      <nav class="navbar navbar-expand-md navbar-dark bg-custom">
+        <div class="container">
+          <a class="navbar-brand" href="#">Plushie</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="itt588_aboutus.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="List_of_services.html">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Payment1.html">Booking</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Hero Banner-->
+    <div class="heroBannercontainer">
+      <div class="container">
+        <div class="row heroBanner justify-content-between">
+          <div><img class="image" src="image/bears.png" alt="teddy" title="teddy" width="565"></div>
+          <div class="bannerInfo">
+            <h1>WELCOME TO PLUSHIE<br>SERVICE CENTER</h1>
+            <p>There are plenty of services that we provide here</p>
+            <p>to make your plushie friends better and prettier.</p>
+            <button class="button button1">Discover Services Now!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Services-->
+    <br><br><h1 class="sectionTitle">Services</h1><br>
+    <div class="servicecontainer">
+      <div class="container">
+        <div class="row service justify-content-between">
+          <div class="col-4 serviceNameL">
+            <h3 href="#"><img class="buttonRotate" src="image/button.png" alt="button" width="64">Build new plush</h3></div>
+          <div class="col-4 serviceNameC">
+            <h3 href="#"><img class="buttonRotate" src="image/button.png" alt="button" width="64">Restore old plush</h3></div>
+          <div class="col-4 serviceNameR">
+            <h3 href="#"><img class="buttonRotate" src="image/button.png" alt="button" width="64">Customize new plush</h3></div>
+        </div>
+        <div class="row service justify-content-between">
+          <div class="col-6 serviceNameL">
+            <h3 href="#"><img class="buttonRotate" src="image/button.png" alt="button" width="64">Cupid service</h3></div>
+          <div class="col-6 serviceNameR">
+            <h3 href="#"><img class="buttonRotate" src="image/button.png" alt="button" width="64">Donate old plush</h3></div>
+        </div>
+      </div>
+    </div>
+
+    <!--How to Use Our Services-->
+    <br><br><h1 class="sectionTitle">How to Use Our Services</h1><br>
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="image/check.png" alt="discover">
+      <h3>Discover</h3>
+      <p>Check all our services and<br>decide which service do you need.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="image/contact.png" alt="contact">
+      <h3>Booking</h3>
+      <p>Place your details about your plushie<br>through the form provided.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="image/card.png" alt="card">
+      <h3>Make Payment</h3>
+      <p>You can make your payment<br>after done booking your slot service.</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="image/deliver.png" alt="delivery">
+      <h3>Delivery</h3>
+      <p>Send us your plushie to the provided<br>address through your email.</p>
+    </div>
+  </div>
+  </div>
+
+  <!--Footer-->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p >Copyright by CS2514A, UiTM Jasin Student</p>
+  </footer>
+
+</body>
+</html>
